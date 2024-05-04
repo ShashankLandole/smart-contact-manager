@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content,title)"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title data-th-replace="${title}">Base</title>
+<link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+	rel="stylesheet" />
+</head>
+<body>
+
+	<ul class="p-4">
+		<li><a data-th-href="@{'/home'}">Home</a></li>
+		<li><a data-th-href="@{'/about'}">About</a></li>
+		<li><a data-th-href="@{'/service'}">Service</a></li>
+	</ul>
+	<div class="p-4">
+		<h1>Base Page Content</h1>
+	
+	<section data-th-replace="${content}"></section>
+	</div>
+	
+	<footer class="p-4"> Footer : Shashank Landole</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
