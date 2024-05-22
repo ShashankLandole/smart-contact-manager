@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="parent(content,title)"
+<html 
+class = "dark"
+lang="en" th:fragment="parent(content,title)"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
@@ -11,11 +13,10 @@
 </head>
 <body>
 
-	<ul class="p-4">
-		<li><a data-th-href="@{'/home'}">Home</a></li>
-		<li><a data-th-href="@{'/about'}">About</a></li>
-		<li><a data-th-href="@{'/service'}">Service</a></li>
-	</ul>
+
+	<!-- common header -->
+	<div data-th-replace = "navbar :: navbar"></div>
+	
 	<div class="p-4">
 		<h1>Base Page Content</h1>
 	
